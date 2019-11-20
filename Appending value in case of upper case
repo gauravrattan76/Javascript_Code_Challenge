@@ -1,0 +1,15 @@
+var text = "gauravRattanGmail";
+var res = "";
+
+for(var i= 0; i< text.length ;i++)
+{
+ if(text.charAt(i)== text.charAt(i).toUpperCase())
+ {
+     res = res + "_" + text.charAt(i);
+     console.log(res);
+ }
+ else{
+  res = res + text.charAt(i); 
+  console.log("output" + res);
+ }
+}
