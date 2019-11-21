@@ -1,0 +1,12 @@
+function compare (a, b) {
+    var y = a.split("").sort().join(""),
+        z = b.split("").sort().join("");
+  if(y ==z){
+      return "anagram";
+  }
+  else{
+      return "not anagram";
+  }
+}
+
+console.log(compare("silent","listen"));
