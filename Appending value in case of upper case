@@ -13,3 +13,24 @@ for(var i= 0; i< text.length ;i++)
   console.log("output" + res);
  }
 }
+
+
+
+________________________
+
+
+var str = "Robin Singh from USA.";
+var res = "";
+for(var i = 0;i <str.length ; i++)
+{
+    if(str[i] == " ")
+    {
+        res = res + "-";
+
+    }
+    else
+    {
+        res = res + str[i];
+    }
+}
+console.log(res.toLowerCase());
