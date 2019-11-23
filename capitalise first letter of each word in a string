@@ -1,0 +1,16 @@
+ function titleCase(str) {
+
+    var myString = str.toLowerCase().split(' ');
+    
+    console.log(myString);
+    for (var i = 0; i < myString.length; i++) {
+        var subString = myString[i].split('');
+        console.log(subString);
+        for (var j = 0; j < subString.length; j++) {
+            subString[0] = subString[0].toUpperCase();
+    
+        }
+        myString[i] = subString.join('');
+    }
+    
+    return myString.join(' '); }
