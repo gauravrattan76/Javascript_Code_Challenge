@@ -1,0 +1,20 @@
+my_name_is_khan to My Name Is khan
+
+
+
+var mystring = "my_name_is_khan";
+
+var arry =mystring.split("_");
+
+
+for(var i =0;i < arry.length;i++)
+{
+    var subs = arry[i].split("");
+    for(var j=0; j< subs.length ; j++)
+    {
+        subs[0] = subs[0].toUpperCase();
+    }
+    arry[i] = subs.join("");
+}
+
+console.log(arry.join(" "));
