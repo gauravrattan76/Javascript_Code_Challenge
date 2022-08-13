@@ -1,0 +1,128 @@
+let arr = [1,2,3,4,5,3,2,1]
+
+
+
+function removeDup(arr)
+
+{
+    
+let uniqueArr = [];
+    
+for(let i = 0; i < arr.length -1 ; i++)
+   
+ {
+        
+const exist = uniqueArr.find(item =>
+{
+         
+ return  item === arr[i]
+        
+})
+        
+       
+ if(!exist)
+        
+{ console.log(arr[i])
+            
+uniqueArr.push(arr[i])
+        
+}
+    
+}
+   
+ return uniqueArr;
+
+}
+
+
+
+
+
+
+console.log(removeDup(arr))
+
+
+since we are using 2 loops time complexity is O(n^2)
+
+_____________________________
+
+
+The time complexity of accessing javascript object property is O(1) time. let use this in our existing algorithm.
+let arr = [1,2,3,4,5,3,2,1]
+
+
+
+function removeDup(arr)
+
+{
+   
+ let uniqueArr = [];
+    
+let hashObject = {}
+    
+for(let i = 0; i < arr.length -1 ; i++)
+   
+ {
+        
+const exist = hashObject[arr[i]];
+        
+        
+if(!exist)
+        
+{ 
+          hashObject[arr[i]] = arr[i]
+  
+        uniqueArr.push(arr[i])
+       
+ }
+    
+}
+  
+  return uniqueArr;
+
+
+}
+
+
+
+console.log(removeDup(arr))
+
+
+Instead of the loop over to find duplication we use a javascript object which behaves like a hash.
+
+The tradeoff here is the space complexity and time complexity. In the first algorithm, we have time complexity and in the second algorithm we have space complexity by adding “tempObject”.
+
+
+
+let arr = [1,2,3,4,5,3,2,1]
+
+
+
+function removeDup(arr)
+
+{
+   let newS = new Set(arr)
+   
+return newS;
+
+}
+
+
+
+
+
+console.log(removeDup(arr))
+
+
+
+_____________
+
+
+let arr = [1,2,3,4,5,3,2,1]
+
+
+let newArr = arr.filter((v,i,a) =>{
+    return a.indexOf(v) === i
+})
+
+console.log(newArr)
